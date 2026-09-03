@@ -5,6 +5,7 @@ const arquivos = [
     './index.html',
     './style.css',
     './script.js',
+    './sw.js',
     './img/solar_system.jpg',
     './img/solar_system2.jpg',
     './img/mercurio.jpg',
