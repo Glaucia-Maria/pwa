@@ -1,4 +1,4 @@
-const expectedCaches = ['static-v5'];
+const expectedCaches = ['static-v6'];
 
 const arquivos = [
     './',
@@ -19,9 +19,9 @@ const arquivos = [
 ];
 
 self.addEventListener('install', event => {
-    console.log('V5 instalando...');
+    console.log('V6 instalando...');
     event.waitUntil(
-        caches.open('static-v5')
+        caches.open('static-v6')
             .then(cache => {
                 return cache.addAll(arquivos);
             })
@@ -37,7 +37,7 @@ self.addEventListener('activate', event => {
                 }
             })
         )).then(() => {
-            console.log("V5 pronto para o fetch!")
+            console.log("V6 pronto para o fetch!")
         })
     )
 });
