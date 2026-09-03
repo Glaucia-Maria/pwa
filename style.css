@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, #25205c 0, transparent 25%),
+        radial-gradient(circle at 80% 70%, #30145c 0, transparent 25%),
+        #050518;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(5, 5, 24, 0.85);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #8ddcff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.hero-texto {
+    max-width: 550px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #8ddcff;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+h1 span {
+    color: #8ddcff;
+}
+
+
+.hero-texto p {
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+    color: #c8c8d8;
+
+    margin-bottom: 35px;
+}
+
+
+.botao {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    color: #050518;
+
+    background: #8ddcff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.botao:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(141, 220, 255, 0.25);
+}
+
+
+.hero-imagem img {
+    width: 100%;
+
+    max-width: 550px;
+
+    display: block;
+
+    margin: auto;
+
+    border-radius: 20px;
+
+    filter: drop-shadow(0 0 40px rgba(100, 180, 255, 0.25));
+}
+
+
+/* =========================
+   PLANETAS
+========================= */
+
+.planetas {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 6%;
+}
+
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.titulo-secao h2,
+.sobre h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    margin-bottom: 15px;
+}
+
+
+.titulo-secao p {
+    color: #aaaabc;
+}
+
+
+.lista-planetas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.card-planeta {
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+.card-planeta:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(141, 220, 255, 0.5);
+}
+
+
+.card-planeta img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+
+.card-planeta h3 {
+    font-size: 1.4rem;
+
+    margin-bottom: 8px;
+}
+
+
+.card-planeta p {
+    color: #aaaabc;
+
+    line-height: 1.5;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    padding: 80px 6%;
+
+    text-align: center;
+}
+
+
+.sobre p {
+    color: #c8c8d8;
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #77778c;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+
+    .hero-texto {
+        margin: auto;
+    }
+
+
+    .lista-planetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        padding: 15px 5%;
+    }
+
+
+    .logo {
+        font-size: 1rem;
+    }
+
+
+    nav {
+        gap: 12px;
+    }
+
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+
+    .hero {
+        min-height: auto;
+
+        padding: 60px 5%;
+    }
+
+
+    .hero-texto p {
+        font-size: 1rem;
+    }
+
+
+    .lista-planetas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card-planeta img {
+        height: 220px;
+    }
+
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explorando o Sistema Solar</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            🚀 Solar Explorer
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#planetas">Planetas</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- APRESENTAÇÃO -->
+        <section id="inicio" class="hero">
+            <div class="hero-texto">
+                <span class="tag">EXPLORAÇÃO ESPACIAL</span>
+                <h1>
+                    Uma viagem pelo
+                    <span>Sistema Solar</span>
+                </h1>
+                <p>
+                    Conheça os planetas, suas características
+                    e algumas curiosidades sobre o nosso
+                    Sistema Solar.
+                </p>
+                <a href="#planetas" class="botao">
+                    Explorar planetas 🚀
+                </a>
+            </div>
+            <div class="hero-imagem">
+                <img
+                    src="img/solar_system.jpg"
+                    alt="Representação do Sistema Solar">
+            </div>
+        </section>
+
+        <!-- PLANETAS -->
+        <section id="planetas" class="planetas">
+            <div class="titulo-secao">
+                <span class="tag">NOSSO SISTEMA</span>
+                <h2>Conheça os planetas</h2>
+                <p>
+                    Clique em um planeta para descobrir mais informações.
+                </p>
+            </div>
+
+            <div id="lista-planetas" class="lista-planetas">
+                <!-- Os planetas serão criados pelo JavaScript -->
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="sobre">
+            <div>
+                <span class="tag">VOCÊ SABIA?</span>
+                <h2>O Sistema Solar</h2>
+                <p>
+                    O Sistema Solar é formado pelo Sol e por todos
+                    os corpos celestes que estão sob sua influência
+                    gravitacional. Entre eles estão os oito planetas,
+                    planetas anões, asteroides e cometas.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            🚀 Solar Explorer — Projeto acadêmico sobre PWA
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
