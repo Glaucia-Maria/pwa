@@ -1,4 +1,4 @@
-const expectedCaches = ['static-v6'];
+const expectedCaches = ['static-v7'];
 
 const arquivos = [
     './',
@@ -19,7 +19,7 @@ const arquivos = [
 ];
 
 self.addEventListener('install', event => {
-    console.log('V6 instalando...');
+    console.log('V7 instalando...');
     event.waitUntil(
         caches.open('static-v6')
             .then(cache => {
@@ -37,7 +37,7 @@ self.addEventListener('activate', event => {
                 }
             })
         )).then(() => {
-            console.log("V6 pronto para o fetch!")
+            console.log("V7 pronto para o fetch!")
         })
     )
 });
@@ -47,6 +47,13 @@ self.addEventListener('fetch', event => {
     // DESAFIO:
     // troca a imagem do Sistema Solar pela imagem alternativa
     if (url.origin === location.origin && url.pathname === '/img/solar_system.jpg') {
-        event.respondWith(caches.match('/img/solar_system2.jpg'));
+        event.respondWith(caches.match('/img/solar_system2.jpg')); return;
     }
+
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => {
+                return response || fetch(event.request);
+            })
+    );
 });
